@@ -1,0 +1,24 @@
+<h2>Product Details</h2>
+<mat-grid-list cols="3" rowHeight="300px">
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+      <mat-card>
+        <img src="{{product$ && product$.image}}" height="300px;" />
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+        [colspan]="2"
+        [rowspan]="1">
+        <mat-list role="list">
+            <mat-list-item role="listitem"><strong>ID</strong>: {{product$ && product$.id}}</mat-list-item>
+            <mat-list-item role="listitem"><strong>Title</strong>: {{product$ && product$.title}}</mat-list-item>
+            <mat-list-item role="listitem"><strong>Short Desc</strong>: {{product$ && product$.shortdesc}}</mat-list-item>
+            <mat-list-item role="listitem"><strong>Description</strong>: {{product$ && product$.desc}}</mat-list-item>
+            <mat-list-item role="listitem"><strong>Price</strong>: {{product$ && product$.price}}</mat-list-item>
+            <mat-list-item role="listitem"><strong>Status</strong>: In Stock</mat-list-item>
+        </mat-list>  
+    </mat-grid-tile>
+
+  </mat-grid-list>  

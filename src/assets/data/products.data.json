@@ -1,0 +1,10 @@
+[
+    {"id": 1, "instock": false, "brand": "Google", "price": "700", "title": "Health Checker", "shortdesc": "Check your health at home", "desc": "Lorem ipsum dolor sit amet", "image": "assets/images/products/1.png"},
+    {"id": 2, "instock": true, "brand": "Fastrack", "price": "500", "title": "Accu Health Check", "shortdesc": "Check your health at home", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "image": "assets/images/products/2.png"},
+    {"id": 3, "instock": true, "brand": "Google", "price": "900", "title": "Fitbit Health Band", "shortdesc": "Check your health at home", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "image": "assets/images/products/3.png"},
+    {"id": 4, "instock": false, "brand": "Fastrack", "price": "350", "title": "Accu Check", "shortdesc": "Check your health at home", "desc": "Product Description", "image": "assets/images/products/4.png"},
+    {"id": 5, "instock": true, "brand": "Fastrack",  "price": "470", "title": "Health Meter", "shortdesc": "Check your health at home", "desc": "Product Description", "image": "assets/images/products/5.png"},
+    {"id": 6, "instock": true, "brand": "Google", "price": "900", "title": "Fitbit Health Band", "shortdesc": "Check your health at home", "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "image": "assets/images/products/3.png"},
+    {"id": 7, "instock": true, "brand": "Fastrack", "price": "350", "title": "Accu Check", "shortdesc": "Check your health at home", "desc": "Product Description", "image": "assets/images/products/4.png"},
+    {"id": 8, "instock": true, "brand": "Fastrack",  "price": "470", "title": "Health Meter", "shortdesc": "Check your health at home", "desc": "Product Description", "image": "assets/images/products/5.png"}
+]

@@ -1,0 +1,228 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~swiper/dist/css/swiper.min.css';
+
+/******* Carousel *******/
+button.swipe-arrow{
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-image: none;
+}
+.swiper-pagination.white .swiper-pagination-bullet{
+  background: #fff;
+}
+.swiper-pagination-bullet-active{
+  width: 12px;
+  height: 12px;
+  vertical-align: -2px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+body {
+  color:#58585b;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  margin: 0;
+  padding:0;
+}
+app-products {
+  display:block;
+  align-items: center;
+}
+
+app-product {    
+  margin:2%;
+  border: 1px solid #ccc;
+  width: 22.5%; 
+  display:inline-block;
+  .mat-card-image {
+      width: 100%;
+      margin: 0;
+  }
+  .mat-card-header-text {
+    margin:0;
+    .mat-card-title {
+      color: #ff4081;
+    }
+  }
+  .mat-card-content {
+    margin: 15px 0;
+  }
+  .mat-card-actions{
+    margin: 0;
+    button.mat-button {
+      border: 1px solid #8b8788;
+      color:#ff4081;
+      &:hover{
+        background-color: #ff4081;
+        color:#fff;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 724px) {
+  app-product {
+    width: 95%;
+  }
+  
+  .mat-form-field-wrapper {
+    width: 85% !important;
+  } 
+  .mat-grid-list {
+    display: block;
+    position: relative;
+    height: auto !important;
+    .mat-grid-tile {
+      display: inline-flex;
+      position: relative;
+      overflow: hidden;
+      width: 100% !important;
+      align-items: center;
+      left: 0 !important;
+      justify-content: center;
+      .mat-card {
+        background: #fff;
+        color: rgba(0,0,0,.87);
+        box-shadow: 0 0 !important;
+      }
+      .mat-figure {
+        justify-content: inherit !important;
+        display: block !important;
+        position: relative !important;
+        .mat-list-item-content {
+          display: inline-flex !important;
+          align-items: flex-start !important;
+      }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 725px) and (max-width:900px) {
+  app-product {
+    width: 45.58%;
+  }
+  
+}
+
+@media only screen and (min-width:901px) and (max-width: 1309px){
+  app-product {
+    width: 29%;
+  }
+}
+
+
+@media only screen and (min-width: 1309px) {
+  app-product {
+    width: 20.85%;
+  }
+}
+mat-icon{
+  cursor:pointer;
+}
+mat-icon:hover{
+  color: #ff4081;
+}
+.mat-toolbar.mat-primary {
+  
+  background: #f2f2f2;
+  color: #3f51b5;
+}
+.price {
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  color: #3f51b5;
+}
+.mat-toolbar.mat-primary {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+.main-slider {
+  margin-top: 64px;
+  border-bottom: 10px solid #ff4081;
+}
+.mat-badge-content{
+  right: 1px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.mat-toolbar-row{
+  height: 64px;
+  display: flex;
+  span{
+    display: inline-flex;
+    align-items: center;
+    img{
+      margin-right: 20px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .active{
+    mat-icon{
+      color: #ff4081;
+    }
+  }
+}
+.mat-list-item-content {
+  display: flex;
+  align-items: center;
+  .product-title {
+      margin-left: 20px;
+      flex-grow: 12;
+      h2{
+        color:#ff4081;
+      }
+      h3{
+        color: #3f51b5;
+      }
+      h2, h3 {
+        margin: 0;
+        line-height: 33px;
+      }
+  }
+}
+app-cart > h2,app-product-detail> h2{
+  text-align: center;
+  color:#ff4081;
+  border-bottom: 1px solid #dfdfdf;
+  margin: 0;
+  padding: 20px 0;
+}
+app-product-detail {
+.mat-figure{
+  justify-content: inherit !important;
+}
+}
+.mat-form-field {
+  width: 95.5%;
+  margin: 0 2.2%;
+  .mat-form-field-wrapper {
+      float: right;
+      width: 45.5%;
+      margin: 10px 0 0;
+  }
+}
+
+.mat-checkbox-frame{
+  border-color: #ff4081 !important;
+}
+.mat-slider-track-background {
+  background-color: #ff4081 !important;
+}
+.mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+  border-color: #ff4081 !important;
+}
+.mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb-label {
+  background-color:#ff4081 !important;
+}

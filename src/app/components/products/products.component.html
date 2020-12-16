@@ -1,0 +1,37 @@
+<div class="wrapper"><div class="example-container">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span>Apply Brand & Price Filter </span>
+    <mat-sidenav-container class="example-sidenav-container" hasBackdrop="false">
+        <mat-sidenav #snav>
+            <mat-nav-list>
+                <h3>Filter Products</h3>
+                <div class="slider">
+                    <h4>Price</h4>
+                    <span>${{minPrice}}</span><mat-slider (input)="onSlider($event)" thumbLabel
+                    [displayWith]="formatLabel"
+                    tickInterval="50"
+                    min="{{minPrice}}"
+                    max="{{maxPrice}}"></mat-slider><span>${{maxPrice}}</span>
+                </div>
+                <div class="brand">
+                    <h4>Brand</h4>
+                    <mat-checkbox *ngFor="let brand of brands$" (change)="onChange($event, brand[0])">{{brand[0]}} ({{ brand[1] }})</mat-checkbox>
+                </div>
+            </mat-nav-list>
+        </mat-sidenav>
+    </mat-sidenav-container>
+</div>
+<form class="example-form">
+    <mat-form-field>
+        <input matInput placeholder="Search" type="search" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" (keyup)="applyFilter(value)">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</form>
+</div>
+<app-product *ngFor="let product of products$" [product]="product">
+</app-product>
+<div *ngIf="!products$.length" class="no-data">
+    Matching products doesn't exist
+</div>

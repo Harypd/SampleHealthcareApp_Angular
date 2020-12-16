@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span><img src="assets/images/healthcare.png" /> HealthCare Products</span>
+        <span class="example-spacer"></span>
+        <a routerLink="/products" routerLinkActive="active">
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">
+                home
+            </mat-icon>
+        </a>
+        <a routerLink="/cart" routerLinkActive="active">
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon" [matBadge]="cartCount" matBadgeColor="accent" matBadgePosition="above after">
+                shopping_cart
+            </mat-icon>
+        </a>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-brands-carousel [slides$]="slides$"></app-brands-carousel>

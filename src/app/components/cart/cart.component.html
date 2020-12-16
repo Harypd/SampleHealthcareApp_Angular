@@ -1,0 +1,33 @@
+<h2>Cart Details</h2>
+<mat-list role="list">
+    <div *ngFor="let product of products$">
+        <mat-list-item role="listitem">
+            <div class="quantity-product">
+                
+            <a [routerLink]="['/product', product.id]">
+                <img mat-card-avatar src="{{product.image}}" style="height: 100px; width: 100px;">
+                
+            </a>
+            <div class="quantity-container">
+                    <div class="quantity-item">
+                        <button class="quantity-minus" (click)="product.quantity=product.quantity-1" [disabled]="product.quantity == 1"> – </button>
+                        <div class="quantity">
+                            <input type="text" value="5" [(ngModel)]="product.quantity" [ngModelOptions]="{standalone: true}" class="quantity-value">
+                        </div>
+                        <button class="quantity-plus" (click)="product.quantity=product.quantity+1"> + </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-title">
+                <h2>{{product.title}}</h2> 
+                <h3>Price ${{ toNumber(product.price) * product.quantity}}</h3>
+                
+            </div>
+            <mat-icon (click)="removeFromCart(product.id)">delete</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="total-container">
+        <div>Total Payable : <h3>${{calculateTotal(products$)}}</h3> <button mat-raised-button color="accent">Order Now</button></div>
+    </div>
+</mat-list>
